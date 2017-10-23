@@ -5,14 +5,17 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
+    "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && surge -p .",
+    "predeploy": "npm run clean & npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "cross-env NODE_ENV=development node server.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "normalize.css": "3.0.3",
     "react": "15.4.2",
     "react-dom": "15.4.2",
@@ -48,7 +51,6 @@
     "is-buffer": "^1.1.1",
     "markdown-loader": "^0.1.7",
     "node-libs-browser": "^0.5.3",
-    "raw-loader": "^0.5.1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.0",
