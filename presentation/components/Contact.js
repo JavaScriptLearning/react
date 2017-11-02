@@ -1,22 +1,15 @@
 export default `import React from 'react';
 import PropTypes from 'prop-types';
 
-const Contact = ({ contact }) => {
-  const name = contact.name ? <h3>{contact.name}</h3> : null;
-  const phone = contact.phone ? <h3>{contact.phone}</h3> : null;
-  const email = contact.email ? <h3>{contact.email}</h3> : null;
-  const description = contact.description ? <p>{contact.description}</p> : null;
-
-
-  return (
+const Contact = ({ contact }) =>
+  (
     <div>
-      {name}
-      {phone}
-      {email}
-      {description}
+      {contact.name ? <h3>{contact.name}</h3> : null}
+      {contact.phone ? <h3>{contact.phone}</h3> : null}
+      {contact.email ? <h3>{contact.email}</h3> : null}
+      {contact.description ? <p>{contact.description}</p> : null}
     </div>
   );
-};
 
 export default Contact;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Appear, Deck, Slide, Heading, List, ListItem, Text } from 'spectacle';
+import { Deck, Slide, Heading, List, ListItem, Text } from 'spectacle';
 import CodeSlide from 'spectacle-code-slide';
 import createTheme from 'spectacle/lib/themes/default';
 
@@ -112,8 +112,8 @@ export default () => (
       ranges={[
         { loc: [0, 0], title: 'App Component' },
         { loc: [1, 2], note: 'Use react-router components' },
-        { loc: [6, 16], note: 'BrowserRouter must havee one child. Wrap children in div' },
-        { loc: [12, 13], note: 'Add route directed to AddressBook' },
+        { loc: [6, 16], note: 'BrowserRouter must have one child. Wrap children in div' },
+        { loc: [12, 13], note: 'Add a route directed to AddressBook' },
         { loc: [8, 10], note: 'Links lead to the defined routes' }
       ]}
     />
@@ -122,11 +122,10 @@ export default () => (
       code={Contact}
       ranges={[
         { loc: [0, 0], title: 'Contact Component' },
-        { loc: [10, 18], note: 'Data must be transformed to return elements' },
-        { loc: [4, 5], note: 'Inputs can be empty, so must handle cases with no data to avoid errors' },
-        { loc: [4, 5], note: 'Can use basic if statements to return components else nothing' },
-        { loc: [12, 16], note: 'Variables can be passed in jsx using curly brackets' },
-        { loc: [23, 29], note: 'Object properties can have shape defined' }
+        { loc: [6, 10], note: 'Inputs can be empty, so must handle cases with no data to avoid errors' },
+        { loc: [6, 10], note: 'Can use brackets in jsx to handle data/use variables inside elements' },
+        { loc: [6, 7], note: 'Can use basic if statements to return components else nothing' },
+        { loc: [16, 22], note: 'Object properties can have shape defined' }
       ]}
     />
     <CodeSlide
@@ -134,9 +133,8 @@ export default () => (
       code={ContactList}
       ranges={[
         { loc: [0, 0], title: 'ContactList Component' },
-        { loc: [5, 6], note: 'Iterate over data to populate with as many components as needed' },
-        { loc: [5, 6], note: 'Elements created by iterating over data require a unique key' },
-        { loc: [7, 12], note: 'Use a variable to return the generated components' }
+        { loc: [7, 8], note: 'Map data into components' },
+        { loc: [7, 8], note: 'Elements created by iterating over data require a unique key' }
       ]}
     />
     <CodeSlide
